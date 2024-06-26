@@ -2,6 +2,8 @@
 
 Learning React
 
+[React Best Practices](https://github.com/airbnb/javascript/tree/master/react)
+
 1. Create an app called "my-react-app"
 
 ```
