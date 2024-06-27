@@ -1,4 +1,5 @@
 import React from "react";
+import Avatar from "./Avatar";
 function Contact(
   props = {
     name: "N/A",
@@ -10,8 +11,8 @@ function Contact(
   return (
     <div className="card">
       <div className="card-content">
+        <Avatar imgUrl={props.imgUrl} />
         <h2>Name: {props.name}</h2>
-        <img src={props.imgUrl} alt="avatar_img" />
         <p>Phone: {props.phone}</p>
         <p>Email: {props.email}</p>
       </div>

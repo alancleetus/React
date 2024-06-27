@@ -68,3 +68,18 @@ body {
     max-width: 52em;
   }
 }
+
+.avatar-img {
+  min-height: 200px;
+}
+
+.avatar-img img {
+  min-height: 200px;
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 200px;
+  border-radius: 200px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  align-items: center;
+}
