@@ -242,3 +242,32 @@ This repository contains various folders, each covering a different aspect of le
       const person = { name: "John", age: 30 };
       const { name, age } = person;
       ```
+18.  **[18-react-forms](./18-react-forms)** 
+    - **Topic**: React Forms
+    - **Explanation**: Understanding how to handle forms in React, including controlled components and form submission.
+    - **Example**:
+      ```jsx
+      
+      function MyForm() {
+        const [name, setName] = useState("");
+        const handleChange = (event) => {
+          setName(event.target.value);
+        };
+        const handleSubmit = (event) => {
+          event.preventDefault();
+          alert("A name was submitted: " + name);
+        };
+        return (
+          <form onSubmit={handleSubmit}>
+            <label>
+              Name:
+              <input type="text" value={name} onChange={handleChange} />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+        );
+      }
+
+      
+      ```
+
