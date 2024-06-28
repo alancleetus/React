@@ -1,6 +1,7 @@
-# React
 
-Learning React
+# React Learning Repository
+
+This repository contains various folders, each covering a different aspect of learning React. Below is a cheatsheet explaining the topics learned in each folder, along with brief explanations and example code.
 
 [React Best Practices](https://github.com/airbnb/javascript/tree/master/react)
 
@@ -28,11 +29,8 @@ npm install
 npm run dev
 ```
 
-# React Learning Repository
 
-This repository contains various folders, each covering a different aspect of learning React. Below is a cheatsheet explaining the topics learned in each folder, along with brief explanations and example code.
-
-### Summary
+# Summary
 
 1. **[1-intro-to-jsx](./1-intro-to-jsx)**
 
