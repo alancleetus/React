@@ -1,16 +1,16 @@
 import React from "react";
-import ListItem from "./ListItem";
+import ToDoForm from "./TodoForm";
+import ToDoList from "./ToDoList";
 
 let nextId = 0;
 function App() {
-  const [inputValue, setInputValue] = React.useState("");
   const [itemList, setList] = React.useState([]);
+  const [inputValue, setInputValue] = React.useState("");
 
   const changeInput = (event) => {
     const { value } = event.target;
     setInputValue(value);
   };
-
   const addToList = () => {
     if (inputValue.length > 0) {
       setList((prevValue) => [
@@ -21,24 +21,25 @@ function App() {
     }
   };
 
+  const deleteItem = (index) => {
+    setList((prevValue) => {
+      return prevValue.filter((item, i) => {
+        return index !== i;
+      });
+    });
+  };
+
   return (
     <div className="container">
       <div className="heading">
         <h1>To-Do List</h1>
       </div>
-      <div className="form">
-        <input type="text" onChange={changeInput} value={inputValue} />
-        <button onClick={addToList}>
-          <span>Add</span>
-        </button>
-      </div>
-      <div>
-        <ul>
-          {itemList.map((item) => (
-            <ListItem key={item.id} item={item.item} />
-          ))}
-        </ul>
-      </div>
+      <ToDoForm
+        addToList={addToList}
+        inputValue={inputValue}
+        changeInput={changeInput}
+      />
+      <ToDoList itemList={itemList} deleteItem={deleteItem} />
     </div>
   );
 }
